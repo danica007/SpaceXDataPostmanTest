@@ -1,0 +1,570 @@
+{
+	"id": "0ef56ead-37ca-47c3-b599-7e8916d603e6",
+	"name": "SpaceXData Postman Test Collection",
+	"timestamp": "2021-06-07T06:23:15.896Z",
+	"collection_id": "1aa4efed-09b0-4e1e-823d-7a4a8963f15d",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 130,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "7ff166cd-41fb-48f4-956d-6d76d31c1d7b",
+			"name": "{{url}}/launches/latest",
+			"time": 127,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Verify launchpad id": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Verify launchpad id": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				137,
+				123,
+				124,
+				124,
+				124,
+				124,
+				123,
+				130,
+				124,
+				127
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Verify launchpad id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launchpad id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launchpad id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launchpad id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launchpad id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launchpad id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launchpad id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launchpad id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launchpad id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launchpad id": true
+				}
+			]
+		},
+		{
+			"id": "62eaf97d-c3fc-4a31-8e3c-1e1d9036add5",
+			"name": "{{url}}/ships/query",
+			"time": 125,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Check legacy id name": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Check legacy id name": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				142,
+				124,
+				124,
+				125,
+				128,
+				124,
+				125,
+				124,
+				124,
+				125
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Check legacy id name": true
+				},
+				{
+					"Status code is 200": true,
+					"Check legacy id name": true
+				},
+				{
+					"Status code is 200": true,
+					"Check legacy id name": true
+				},
+				{
+					"Status code is 200": true,
+					"Check legacy id name": true
+				},
+				{
+					"Status code is 200": true,
+					"Check legacy id name": true
+				},
+				{
+					"Status code is 200": true,
+					"Check legacy id name": true
+				},
+				{
+					"Status code is 200": true,
+					"Check legacy id name": true
+				},
+				{
+					"Status code is 200": true,
+					"Check legacy id name": true
+				},
+				{
+					"Status code is 200": true,
+					"Check legacy id name": true
+				},
+				{
+					"Status code is 200": true,
+					"Check legacy id name": true
+				}
+			]
+		},
+		{
+			"id": "fd146192-1545-4372-ae17-440fa40c8115",
+			"name": "{{url}}/launches/:5eb87ce7ffd86e000604b33b",
+			"time": 290,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Engine failure check": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Engine failure check": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				476,
+				139,
+				162,
+				144,
+				137,
+				143,
+				155,
+				140,
+				137,
+				290
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Engine failure check": true
+				},
+				{
+					"Status code is 200": true,
+					"Engine failure check": true
+				},
+				{
+					"Status code is 200": true,
+					"Engine failure check": true
+				},
+				{
+					"Status code is 200": true,
+					"Engine failure check": true
+				},
+				{
+					"Status code is 200": true,
+					"Engine failure check": true
+				},
+				{
+					"Status code is 200": true,
+					"Engine failure check": true
+				},
+				{
+					"Status code is 200": true,
+					"Engine failure check": true
+				},
+				{
+					"Status code is 200": true,
+					"Engine failure check": true
+				},
+				{
+					"Status code is 200": true,
+					"Engine failure check": true
+				},
+				{
+					"Status code is 200": true,
+					"Engine failure check": true
+				}
+			]
+		},
+		{
+			"id": "4a47828e-dfff-4b46-a752-50ddbfb846e8",
+			"name": "{{url}}/rockets/query",
+			"time": 122,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Contains Wiki info on Falcon 1": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Contains Wiki info on Falcon 1": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				138,
+				123,
+				125,
+				123,
+				135,
+				123,
+				123,
+				124,
+				131,
+				122
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Contains Wiki info on Falcon 1": true
+				},
+				{
+					"Status code is 200": true,
+					"Contains Wiki info on Falcon 1": true
+				},
+				{
+					"Status code is 200": true,
+					"Contains Wiki info on Falcon 1": true
+				},
+				{
+					"Status code is 200": true,
+					"Contains Wiki info on Falcon 1": true
+				},
+				{
+					"Status code is 200": true,
+					"Contains Wiki info on Falcon 1": true
+				},
+				{
+					"Status code is 200": true,
+					"Contains Wiki info on Falcon 1": true
+				},
+				{
+					"Status code is 200": true,
+					"Contains Wiki info on Falcon 1": true
+				},
+				{
+					"Status code is 200": true,
+					"Contains Wiki info on Falcon 1": true
+				},
+				{
+					"Status code is 200": true,
+					"Contains Wiki info on Falcon 1": true
+				},
+				{
+					"Status code is 200": true,
+					"Contains Wiki info on Falcon 1": true
+				}
+			]
+		},
+		{
+			"id": "55255fd5-0026-4fac-a48e-cef1f4317dbe",
+			"name": "{{url}}/starlink/",
+			"time": 212,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Your test name": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Your test name": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				517,
+				225,
+				204,
+				201,
+				206,
+				200,
+				202,
+				213,
+				199,
+				212
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Your test name": true
+				},
+				{
+					"Status code is 200": true,
+					"Your test name": true
+				},
+				{
+					"Status code is 200": true,
+					"Your test name": true
+				},
+				{
+					"Status code is 200": true,
+					"Your test name": true
+				},
+				{
+					"Status code is 200": true,
+					"Your test name": true
+				},
+				{
+					"Status code is 200": true,
+					"Your test name": true
+				},
+				{
+					"Status code is 200": true,
+					"Your test name": true
+				},
+				{
+					"Status code is 200": true,
+					"Your test name": true
+				},
+				{
+					"Status code is 200": true,
+					"Your test name": true
+				},
+				{
+					"Status code is 200": true,
+					"Your test name": true
+				}
+			]
+		},
+		{
+			"id": "5efbfc4a-d81b-4715-b6ee-6eff435dfaa4",
+			"name": "{{url}}/starlink/:5eed770f096e59000698560d",
+			"time": 206,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				263,
+				224,
+				225,
+				209,
+				201,
+				208,
+				211,
+				205,
+				207,
+				206
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "03f85cce-4b79-4564-b08e-45e9b80ffd93",
+			"name": "{{url}}/starlink/query",
+			"time": 124,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Verify launch id": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Verify launch id": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				124,
+				124,
+				125,
+				123,
+				124,
+				130,
+				126,
+				124,
+				126,
+				124
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Verify launch id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launch id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launch id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launch id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launch id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launch id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launch id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launch id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launch id": true
+				},
+				{
+					"Status code is 200": true,
+					"Verify launch id": true
+				}
+			]
+		}
+	],
+	"count": 10,
+	"totalTime": 11503,
+	"collection": {
+		"requests": [
+			{
+				"id": "7ff166cd-41fb-48f4-956d-6d76d31c1d7b",
+				"method": "GET"
+			},
+			{
+				"id": "62eaf97d-c3fc-4a31-8e3c-1e1d9036add5",
+				"method": "POST"
+			},
+			{
+				"id": "fd146192-1545-4372-ae17-440fa40c8115",
+				"method": "GET"
+			},
+			{
+				"id": "4a47828e-dfff-4b46-a752-50ddbfb846e8",
+				"method": "POST"
+			},
+			{
+				"id": "55255fd5-0026-4fac-a48e-cef1f4317dbe",
+				"method": "GET"
+			},
+			{
+				"id": "5efbfc4a-d81b-4715-b6ee-6eff435dfaa4",
+				"method": "GET"
+			},
+			{
+				"id": "03f85cce-4b79-4564-b08e-45e9b80ffd93",
+				"method": "POST"
+			}
+		]
+	}
+}

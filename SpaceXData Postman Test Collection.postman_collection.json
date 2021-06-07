@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "1aa4efed-09b0-4e1e-823d-7a4a8963f15d",
+		"name": "SpaceXData Postman Test Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{url}}/launches/latest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Verify launchpad id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.launchpad).to.eql(\"5e9e4501f509094ba4566f84\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/launches/latest",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"launches",
+						"latest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/ships/query",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check legacy id name\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"AMERICANCHAMPION\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"ships\": [\r\n        \"5ee68c683c228f36bd5809b5\",\r\n        \"5ea6ed2f080df4000697c910\",\r\n        \"5ea6ed2f080df4000697c90b\",\r\n        \"5ea6ed2e080df4000697c909\"\r\n    ],\r\n    \"payloads\": [\r\n        \"5fe3b57db3467846b324217a\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/ships/query",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"ships",
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/launches/:5eb87ce7ffd86e000604b33b",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Engine failure check\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Engine failure at 33 seconds and loss of vehicle\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/launches/:5eb87ce7ffd86e000604b33b",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"launches",
+						":5eb87ce7ffd86e000604b33b"
+					],
+					"variable": [
+						{
+							"key": "5eb87ce7ffd86e000604b33b",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/rockets/query",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Contains Wiki info on Falcon 1\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"https://en.wikipedia.org/wiki/Falcon_1\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"rocket\": \"5e9d0d95eda69955f709d1eb\",\r\n \"payloads\": [\r\n            \"5eb0e4b5b6c3bb0006eeb1e1\"\r\n        ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/rockets/query",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rockets",
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/starlink/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].id).to.eql(\"5eed770f096e59000698560d\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/starlink/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"starlink",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/starlink/:5eed770f096e59000698560d",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/starlink/:5eed770f096e59000698560d",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"starlink",
+						":5eed770f096e59000698560d"
+					],
+					"variable": [
+						{
+							"key": "5eed770f096e59000698560d",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/starlink/query",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify launch id\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"5eb87d30ffd86e000604b378\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id\": \"5eed770f096e590006985613\",\r\n     \"spaceTrack\": {\r\n            \"CCSDS_OMM_VERS\": \"2.0\",\r\n            \"COMMENT\": \"GENERATED VIA SPACE-TRACK.ORG API\",\r\n            \"CREATION_DATE\": \"2021-04-10T10:26:10\",\r\n            \"ORIGINATOR\": \"18 SPCS\",\r\n            \"OBJECT_NAME\": \"STARLINK-26\",\r\n            \"OBJECT_ID\": \"2019-029F\",\r\n            \"CENTER_NAME\": \"EARTH\",\r\n            \"REF_FRAME\": \"TEME\",\r\n            \"TIME_SYSTEM\": \"UTC\",\r\n            \"MEAN_ELEMENT_THEORY\": \"SGP4\",\r\n            \"EPOCH\": \"2021-04-10T10:04:00.819552\",\r\n            \"MEAN_MOTION\": 16.41561846,\r\n            \"ECCENTRICITY\": 0.0004843,\r\n            \"INCLINATION\": 52.9634,\r\n            \"RA_OF_ASC_NODE\": 161.2403,\r\n            \"ARG_OF_PERICENTER\": 7.8568,\r\n            \"MEAN_ANOMALY\": 353.8836,\r\n            \"EPHEMERIS_TYPE\": 0,\r\n            \"CLASSIFICATION_TYPE\": \"U\",\r\n            \"NORAD_CAT_ID\": 44240,\r\n            \"ELEMENT_SET_NO\": 999,\r\n            \"REV_AT_EPOCH\": 10601,\r\n            \"BSTAR\": 0.0012328,\r\n            \"MEAN_MOTION_DOT\": 0.20637293,\r\n            \"MEAN_MOTION_DDOT\": 0.000012492,\r\n            \"SEMIMAJOR_AXIS\": 6539.788,\r\n            \"PERIOD\": 87.721,\r\n            \"APOAPSIS\": 164.82,\r\n            \"PERIAPSIS\": 158.486,\r\n            \"OBJECT_TYPE\": \"PAYLOAD\",\r\n            \"RCS_SIZE\": \"LARGE\",\r\n            \"COUNTRY_CODE\": \"US\",\r\n            \"LAUNCH_DATE\": \"2019-05-24\",\r\n            \"SITE\": \"AFETR\",\r\n            \"DECAY_DATE\": \"2021-04-10\",\r\n            \"DECAYED\": 1,\r\n            \"FILE\": 3013724,\r\n            \"GP_ID\": 175267022,\r\n            \"TLE_LINE0\": \"0 STARLINK-26\",\r\n            \"TLE_LINE1\": \"1 44240U 19029F   21100.41945393  .20637293  12492-4  12328-2 0  9999\",\r\n            \"TLE_LINE2\": \"2 44240  52.9634 161.2403 0004843   7.8568 353.8836 16.41561846106011\"\r\n        }\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/starlink/query",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"starlink",
+						"query"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
